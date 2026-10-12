@@ -1,0 +1,86 @@
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  height: 3rem;
+  padding: 0 1.75rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  transition: background var(--dur) var(--ease),
+              color var(--dur) var(--ease),
+              border-color var(--dur) var(--ease);
+  text-align: center;
+  white-space: nowrap;
+}
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn--block { width: 100%; }
+.btn--sm { height: 2.5rem; padding: 0 1.25rem; font-size: 0.68rem; }
+.btn--lg { height: 3.5rem; padding: 0 2.25rem; }
+
+.btn--primary { background: var(--onyx); color: var(--ivory); }
+.btn--primary:hover:not(:disabled) { background: var(--charcoal-2); }
+
+.btn--gold { background: var(--gold); color: var(--onyx); }
+.btn--gold:hover:not(:disabled) { background: var(--gold-hover); }
+
+.btn--outline { border-color: var(--onyx); color: var(--onyx); background: transparent; }
+.btn--outline:hover:not(:disabled) { background: var(--onyx); color: var(--ivory); }
+
+.btn--ghost { background: transparent; color: var(--onyx); border-color: var(--border-light); }
+.btn--ghost:hover:not(:disabled) { border-color: var(--onyx); }
+
+/* ---------- Forms ---------- */
+.field { display: flex; flex-direction: column; gap: 0.4rem; }
+.field__label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  font-weight: 500;
+}
+.field__control {
+  width: 100%;
+  height: 2.9rem;
+  padding: 0 0.9rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  background: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--onyx);
+  transition: border-color var(--dur) var(--ease);
+}
+.field__control:focus { border-color: var(--onyx); outline: none; }
+.field__control::placeholder { color: var(--muted); }
+
+.field__select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path d='M1 1l5 5 5-5' fill='none' stroke='%23111111' stroke-width='1.4'/></svg>");
+  background-repeat: no-repeat;
+  background-position: right 0.9rem center;
+  padding-right: 2.4rem;
+}
+
+/* ---------- Badges ---------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.55rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius);
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted-2);
+  background: var(--ivory);
+}
+.badge--gold { border-color: var(--border-gold); color: var(--gold-hover); background: transparent; }
+.badge--dark { border-color: var(--border-dark); color: var(--ivory); background: transparent; }
